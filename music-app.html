@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MUSIC PLAYER</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="music.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans">
+   <!-- --------- -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musico</title>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="file:///C:/Users/Shubham%20Bharti/Desktop/music%20player/music.svg">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/uqa7roz.css">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+		rel="stylesheet">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+ </head>
+<body>
+<main >
+
+	<section id="nav-sec main">
+		<div class="navbar">
+			<div id=nav-left>
+			   <div class="hamburger">
+			  	  <div id="menu-bar">
+			  	  	 <div id="menu" id="button" onclick="onClickMenu()">
+						<div id="bar1" class="bar"></div>
+						<div id="bar2" class="bar"></div>
+						<div id="bar3" class="bar"></div>
+			         </div>
+			         <ul class="nav" id="nav">
+						<li><a href="#">Home</a></li>
+						<li id="queue-hng"><a href="#aside-queue">Queue</a></li>
+						<li><a href="#latest-release">Latest Release</a></li>
+						
+			         </ul>
+			        </div>
+					<div class="menu-bg" id="menu-bg"></div>
+					
+			  	</div>
+				<div class="nav-music-player-icon">
+					<img src="./music.svg">
+				</div>
+				<div class="name-of-music-player">
+					<h3>
+						<span class="f-size" style="font-weight: 500;">Shubham</span><br>
+						<span class="f-size">Studio</span>
+					</h3>
+			    </div>
+				<div class="favourites-heading">
+				    <h3>favourites</h3>
+				</div>
+			</div>
+			<div id="nav-right">
+				<div class="nav-search-bar-container">
+					<div class="nav-search-bar">
+						<a class="search-btn" href="">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</a>
+						<input classs="search-txt"type="text" name="search-bar" placeholder="Search..">
+						<a class="search-mic" href="">
+							<i class="fa fa-microphone" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+				<div class="notification-icon">
+					<a href="">
+					<i class="fa fa-bell" aria-hidden="true"></i>
+					</a>
+				</div>
+				<div class="nav-album-con">
+					<img src="myimg.jpg">
+					
+				</div>
+			</div>
+		</div>
+	</section>	
+	<section id="trending-header">
+		<div class="trending-container">
+			<div class="trending-1">
+				<a href="fast.html" target="_self"><img src="https://wallpapercave.com/wp/wp1911658.jpg"></a>
+			</div>
+			<div class="trending-2">
+				<a href="justinbieber.html" target="_self"><img src="https://wallpaperaccess.com/full/351878.jpg"></a>
+			</div>
+			<div class="trending-3">
+				<a href="dilbechara.html" target="_self"><img src="https://english.cdn.zeenews.com/sites/default/files/styles/zm_700x400/public/2020/06/25/868680-dil-bechara.jpg"></a>
+			</div>
+		</div>
+	</section>
+	<audio controls>
+	  <source src="Pal - Arijit Singh 320Kbps.ogg" type="audio/ogg">
+	  <source src="Pal - Arijit Singh 320Kbps.mp3" type="audio/mpeg">
+	  	<embed name="GoodEnough" src="Pal - Arijit Singh 320Kbps.mp3" loop="false" hidden="true" autostart="true">
+
+      
+     </audio>
+     
+
+	<!-- aside-queue -->
+	<aside id="aside-queue" >
+		<div class="aside-queue-container">
+			    <div class="left-part">
+					<div class="queue-con-name">
+						<h4><span>My Playerlist</span></h4>
+					</div>
+				</div>
+				<div class="right-part">
+				    <div class="dropdown">
+					    <button class="dropbtn">Queue
+					      <i class="fa fa-caret-down"></i>
+					    </button>
+					    <div class="dropdown-content">
+					      <a href="#">Player list 1</a>
+					      <a href="#">Player list 2</a>
+					    </div>
+                    </div>
+			    </div>
+		</div>
+
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			01
+		
+            </div>
+			<div class="queue-image inline-block">
+				<img src="https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>Worry Bont Us</p>
+				<p class="font-small font-white margin-negative">Rosie Lawe</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			02
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://cdn3.vectorstock.com/i/1000x1000/40/97/gramophone-vinyl-player-playing-record-vector-28894097.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>Mirage</p>
+				<p class="font-small font-white margin-negative">Else</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			   <span>03</span>
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://www.themillions.com/wp-content/uploads/2015/09/33_Umin.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>New Skin</p>
+				<p class="font-small font-white margin-negative">Fume</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			04
+		
+            </div>
+			<div class="queue-image inline-block">
+				<img src="https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>Worry Bont Us</p>
+				<p class="font-small font-white margin-negative">Rosie Lawe</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			05
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://cdn3.vectorstock.com/i/1000x1000/40/97/gramophone-vinyl-player-playing-record-vector-28894097.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>Mirage</p>
+				<p class="font-small font-white margin-negative">Else</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			   <span>06</span>
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://www.themillions.com/wp-content/uploads/2015/09/33_Umin.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>New Skin</p>
+				<p class="font-small font-white margin-negative">Fume</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			07
+		
+            </div>
+			<div class="queue-image inline-block">
+				<img src="https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>Worry Bont Us</p>
+				<p class="font-small font-white margin-negative">Rosie Lawe</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			08
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://cdn3.vectorstock.com/i/1000x1000/40/97/gramophone-vinyl-player-playing-record-vector-28894097.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>Mirage</p>
+				<p class="font-small font-white margin-negative">Else</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			   <span>09</span>
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://www.themillions.com/wp-content/uploads/2015/09/33_Umin.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>New Skin</p>
+				<p class="font-small font-white margin-negative">Fume</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			10
+		
+            </div>
+			<div class="queue-image inline-block">
+				<img src="https://images.theconversation.com/files/258026/original/file-20190208-174861-nms2kt.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>Worry Bont Us</p>
+				<p class="font-small font-white margin-negative">Rosie Lawe</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			11
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://cdn3.vectorstock.com/i/1000x1000/40/97/gramophone-vinyl-player-playing-record-vector-28894097.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>Mirage</p>
+				<p class="font-small font-white margin-negative">Else</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			   <span>13</span>
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://www.themillions.com/wp-content/uploads/2015/09/33_Umin.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>New Skin</p>
+				<p class="font-small font-white margin-negative">Fume</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			   <span>12</span>
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://www.themillions.com/wp-content/uploads/2015/09/33_Umin.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>New Skin</p>
+				<p class="font-small font-white margin-negative">Fume</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+		</div>
+		<div class="song-list-1">
+			<div class="queue-song-no inline-block font-white">
+			   <span>14</span>
+		    </div>
+
+			<div class="queue-image inline-block">
+				<img src="https://www.themillions.com/wp-content/uploads/2015/09/33_Umin.jpg">
+			</div>
+
+			<div class="queue-album-name inline-block font-white">
+				<p>New Skin</p>
+				<p class="font-small font-white margin-negative">Fume</p>
+			</div>
+
+			<div class="heart-icon inline-block font-white">
+				<i class="fa fa-heart"></i>
+			</div>
+		</div>
+	</aside>
+	<section id="latest-release">
+		<h1 class="section-heading mb75px ">
+                
+                <span> Latest Release </span>
+        </h1>
+		<div class="latest-release-container">
+			<div class="release-items">
+				<div class="song-img">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS-A58-r7x0ZN2TrqHTbPrUm6TANo8IZ20xmQ&usqp=CAU">
+				</div>
+				<div class="album-name font-white">
+					<p>New Skin</p>
+					<p class="font-small font-white margin-negative">Fume</p>
+			    </div>
+			    <div class="heart-icon inline-block font-white">
+				  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+				  <p class="font-small font-white margin-negative" >4:40</p>
+
+			    </div>
+			</div>
+			<div class="release-items">
+				<div class="song-img">
+					<img src="https://wikibio.in/wp-content/uploads/2017/11/Neha-Kakkar.jpg">
+				</div>
+				<div class="album-name font-white">
+					<p>New Skin</p>
+					<p class="font-small font-white margin-negative">Fume</p>
+			    </div>
+			    <div class="heart-icon inline-block font-white">
+				  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+				  <p class="font-small font-white margin-negative" >4:40</p>
+
+			    </div>
+			</div>
+			<div class="release-items">
+				<div class="song-img">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT8vvkuX_YYdfPBJMnnmpb3KH8X6vESmZXpKA&usqp=CAU">
+				</div>
+				<div class="album-name font-white">
+					<p>New Skin</p>
+					<p class="font-small font-white margin-negative">Fume</p>
+			    </div>
+			    <div class="heart-icon inline-block font-white">
+				  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+				  <p class="font-small font-white margin-negative" >4:40</p>
+
+			    </div>
+				
+			</div>
+			<div class="release-items">
+				<div class="song-img">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT8vvkuX_YYdfPBJMnnmpb3KH8X6vESmZXpKA&usqp=CAU">
+				</div>
+				<div class="album-name font-white">
+					<p>New Skin</p>
+					<p class="font-small font-white margin-negative">Fume</p>
+			    </div>
+			    <div class="heart-icon inline-block font-white">
+				  <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+				  <p class="font-small font-white margin-negative" >4:40</p>
+
+			    </div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<section id="popular-artish">
+		<h1 class="section-heading mb75px ">
+                
+                <span> Popular Artists </span>
+        </h1>
+        <div class="popular-artish-container">
+        	 <div class="artish-img container">
+        		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVdVBGyv8NplmNkdMPWjJ8BORsHxm0QpHwXw&usqp=CAU" class="image" style="width:100%" >
+        		 <p>Coldplay</p>
+        		<div class="middle">
+                   <a href="justinbieber.html" target="_self"><div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div></a>
+               </div>
+        	 </div>
+             <div class="artish-img container">
+        		<img src="https://static.tvtropes.org/pmwiki/pub/images/Coldplay_coldplay_yalpdolc_784.jpg" class="image" style="width:100%" >
+        		 <p>Coldplay</p>
+        		<div class="middle">
+                   <a href="justinbieber.html" target="_self"><div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div></a>
+               </div>
+        	 </div>
+        	 <div class="artish-img container">
+        		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Zayn_Wiki.jpg/220px-Zayn_Wiki.jpg" class="image" style="width:100%" >
+        		 <p>Zayn</p>
+        		<div class="middle">
+                   <a href="justinbieber.html" target="_self"><div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div></a>
+               </div>
+        	 </div>
+        	 <div class="artish-img container">
+        		<img src="https://static.tvtropes.org/pmwiki/pub/images/Coldplay_coldplay_yalpdolc_784.jpg" class="image" style="width:100%" >
+        		 <p>Charlie Puth</p>
+        		<div class="middle">
+                   <a href="justinbieber.html" target="_self"><div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div></a>
+               </div>
+        	 </div>
+        	 <div class="artish-img container">
+        		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRVdVBGyv8NplmNkdMPWjJ8BORsHxm0QpHwXw&usqp=CAU" class="image" style="width:100%" >
+        		 <p>Imagine Dragron</p>
+        		<div class="middle">
+                   <a href="justinbieber.html" target="_self"><div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div></a>
+               </div>
+        	 </div>
+        	 <div class="artish-img container">
+        		<img src="https://lh3.googleusercontent.com/p_awLVdtVtxG9cw3BtelvZAMgEHJ6thFb2xScF1goKqtf_FiW07YBgLlufzcMad12gk11u74tA=w412-h732-rw" class="image" style="width:100%" >
+        		 <p>Bruno Mars</p>
+        		<div class="middle">
+                   <a href="justinbieber.html" target="_self"><div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div></a>
+               </div>
+        	 </div>
+        </div>
+   </section>
+   <section id="play-station">
+   	 <div class="play-station-container">
+   	 	<div class="play-station-logo">
+   	 		<img src="https://images.cdn2.stockunlimited.net/preview1300/music-player-icon_1598792.jpg">
+   	 	</div>
+   	 	<div class="play-station-item container">
+   	 		<img src="https://i.pinimg.com/originals/1d/04/57/1d045748a467996309534bba00256aa0.jpg" class="image" style="width:100%" >
+        		 
+        		<div class="middle">
+                   <div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+               </div>
+        </div>
+         <!--   -->
+          <div class="play-station-item container">
+			<img src="https://images.hdqwalls.com/wallpapers/dwayne-johnson-workout-new.jpg" class="image" style="width:100%" >
+        		 
+        		<div class="middle">
+                   <div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+               </div>
+          </div>
+          <div class="play-station-item container">
+   	 		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTeexmC73RvuOHEl4xTDWQFnikrHo4AWFyoPw&usqp=CAU" class="image" style="width:100%" >
+        		 
+        		<div class="middle">
+                   <div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+               </div>
+          </div>
+          <div class="play-station-item container">
+   	 		<img src="https://images.hdqwalls.com/wallpapers/dwayne-johnson-workout-new.jpg" class="image" style="width:100%" >
+        		 
+        		<div class="middle">
+                   <div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+               </div>
+          </div>
+          <div class="play-station-item container">
+   	 		<img src="https://www.myhinduethics.com/wp-content/uploads/2014/04/God-Vishnu_Shri_Lakshmi.jpg" style="width:100%" >
+        		 
+        		<div class="middle">
+                   <div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+               </div>
+          </div>
+          <div class="play-station-item container">
+   	 		<img src="./sq lv.jpg" style="width:100%" >
+        		 
+        		<div class="middle">
+                   <div class="text"><i class="fa fa-play-circle" aria-hidden="true"></i></div>
+               </div>
+          </div>
+   	 </div>
+   </section>
+   <section id="collection">
+		<div class="collection-container">
+			<div class="collection-div">
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTS5gcACpGJM8JPLcjmy33bAb6rJ8MZ1LxINg&usqp=CAU">
+				<p>Party</p>
+			</div>
+			<div class="collection-div">
+				<img src="https://i.ytimg.com/vi/6-HrB1lqTbw/maxresdefault.jpg">
+				<p>Electronic</p>
+			</div>
+			<div class="collection-div">
+				<img src="https://www.traveller.com.au/content/dam/images/g/m/q/b/5/y/image.related.articleLeadwide.620x349.gmqb2b.png/1455100989139.jpg">
+				<p>Roadtrip</p>
+			</div>
+		</div>
+	</section>
+	<section id="Latest-english">
+		<h1 class="section-heading mb75px ">
+                
+                <span> Latest English </span>
+        </h1>
+        <div class="Latest-english-container">
+	        <div class="Latest-english-item">
+	   	 		 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTeexmC73RvuOHEl4xTDWQFnikrHo4AWFyoPw&usqp=CAU">
+                <p class="font-white">Onism</p>
+				<p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://i.pinimg.com/originals/1d/04/57/1d045748a467996309534bba00256aa0.jpg">
+	   	 		 <p class="font-white">Imagine </p>
+				<p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://activeforlife.com/content/uploads/2017/12/girl-sand-angel.jpg">
+	   	 		 <p class="font-white">Onism</p>
+				 <p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 		 
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://images.hdqwalls.com/wallpapers/dwayne-johnson-workout-new.jpg">
+	   	 		 <p class="font-white">Mars</p>
+				 <p class="font-small font-white margin-negative">AUG 11,2017</p>
+
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://image.shutterstock.com/image-photo/fans-live-rock-music-concert-600w-1709746711.jpg">
+	   	 		 <p class="font-white">Bruno </p>
+				 <p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 		 
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://image.shutterstock.com/image-photo/singer-holding-microphone-stand-performing-260nw-1039242106.jpg">
+	   	 		 <p class="font-white">Imagine</p>
+				 <p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 		 
+	   	 	</div>
+	   	 </div>
+    </section>
+    
+    	
+    <section id="Latest-english">
+		<h1 class="section-heading mb75px ">
+                
+                <span> Latest Hindi </span>
+        </h1>
+        <div class="Latest-english-container">
+	        <div class="Latest-english-item">
+	   	 		 <img src="https://i1.wp.com/kashmir.today/wp-content/uploads/2020/04/Atif-Aslam-100420.jpg?fit=1080%2C775&ssl=1">
+                <p class="font-white">Atif Aslam</p>
+				<p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://lastfm.freetls.fastly.net/i/u/770x0/d24225efe91271b19ff091da7a3aa735.jpg">
+	   	 		 <p class="font-white">Neha kakar </p>
+				<p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 		 
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://wallpaperaccess.com/full/1280810.jpg">
+	   	 		 <p class="font-white">Arijit Sing</p>
+				 <p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 		 
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://static.toiimg.com/photo/msid-69881654/69881654.jpg?101090dwayne-johnson-workout-new.jpg">
+	   	 		 <p class="font-white">Honey singh</p>
+				 <p class="font-small font-white margin-negative">AUG 11,2017</p>
+
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Tri_Nation_Mega_Concert_Sonu_Nigam_%288388606383%29.jpg">
+	   	 		 <p class="font-white">Sonu Nigam </p>
+				 <p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 		 
+	   	 	</div>
+	   	 	<div class="Latest-english-item">
+	   	 		 <img src="https://static.toiimg.com/thumb/msid-74993593,imgsize-195468,width-800,height-600,resizemode-75/74993593.jpg">
+	   	 		 <p class="font-white">Jubin</p>
+				 <p class="font-small font-white margin-negative">AUG 11,2017</p>
+	   	 		 
+	   	 	</div>
+	   	 </div>
+    </section>
+    <audio controls>
+	  <source src="Pal - Arijit Singh 320Kbps.ogg" type="audio/ogg">
+	  <source src="Pal - Arijit Singh 320Kbps.mp3" type="audio/mpeg">
+	  	<embed name="GoodEnough" src="Pal - Arijit Singh 320Kbps.mp3" loop="false" hidden="true" autostart="true">
+
+      
+     </audio>
+    <footer id="footer-part">
+    	<div class="footer-container">
+    		<div class="footer-left">
+    			<div class="footer-playing-image inline-block">
+				   <img src="https://www.themillions.com/wp-content/uploads/2015/09/33_Umin.jpg">
+			    </div>
+
+			    <div class="footer-playing-album-name inline-block font-white">
+				  <p>New Skin</p>
+				  <p class="font-small font-white margin-negative">Fume</p>
+			    </div>
+
+			    <div class="heart-icon inline-block font-white">
+				   <i class="fa fa-heart"></i>
+			    </div>
+    		</div>
+    		<div class="footer-center">
+    			<div class="middle-part">
+    				<a href=""><i class=" material-icons md-light md-18">shuffle</i></a>
+    				<a href=""><i class=" material-icons md-light md-24">skip_previous</i></a>
+    				<a href=""><i class="material-icons-round">pause_circle_filled</i></a>
+                    <a href=""><i class=" material-icons md-light md-24">skip_next</i></a>
+                    <a href=""><i class="material-icons md-light md-18">repeat</i></a>
+                    <div class="knob">
+                    	<div class="seeker-cnt">
+	                        <div class="seeker-out">
+	                            <div class="seeker-in"></div>
+	                        </div>
+
+	                        <div class="seeker-knob"></div>
+
+	                        <span class="time-left">1:12</span>
+	                        <span class="time-right">4:34</span>
+                        </div>
+                    </div>
+    	        </div>
+    		</div>
+    		
+    		<div class="footer-right">
+             <a href=""><i class=" material-icons md-light md-24">playlist_play</i></a>
+             <a href=""><i class=" material-icons md-light md-18">devices</i></a>
+             <a href=""><i class=" material-icons md-light md-18">volume_up</i></a>
+	             <div class="volm-cnt">
+	                                <div class="volm-out">
+	                                    <div class="volm-in"></div>
+	                                </div>
+
+	                                <div class="volm-knob">
+
+	                                </div>
+	               </div>
+    			
+    		</div>
+
+
+
+
+
+        </div>
+    </footer>
+
+
+</main>
+ <script src="script.js"></script>
+   <script type="text/javascript">
+	   	$("#queue-hng").click(function(){
+		$("#main").css("display","none");
+		})
+   </script>
+</body>
+</html>
